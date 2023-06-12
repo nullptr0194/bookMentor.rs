@@ -1,0 +1,308 @@
+﻿ID,Kurs,o/i,ER,SIMinGod,IRMinGod,OSMinGod,OTMinGod,OGMinGod,OFMinGod,OEMinGod,Tagovi
+1,Matematika 1,o,1,1,,,,,,,"Algebra:0.3,Linear Algebra:0.3,Calculus:0.3,Math, Science, Engineering:0.3,Math:0.6,"
+2,"Osnovi elektrotehnike 1	",o,1,,,,,,,,"Microelectronics:0.4,Engineering:0.1,Electrical Engineering:0.4,"
+3,Fizika,o,1,1,,,,,,,"Game Physics:0.1,Optics:0.2,Lasers:0,1,Physics:0.8,Science:0.1,"
+4,Programiranje 1,o,1,1,,,,,,,"Low-Level Languages:0.3,Regular Expressions:0.1,Functional Programming:0.1,Assembly:0.1,Programming Languages:0.2,Problem Solving:0.2,Coding Practices:0.1,Software Developmen:0.2,Algorithms:0.2,Computer Science:0.2,Python:0.8,"
+5,Osnovi elektronike,o,,1,,,,2,,,"Microelectronics:0.4,Engineering:0.1,Electrical Engineering:0.4,"
+6,Laboratorijske vežbe iz Fizike,o,1,,,,,,,,"Game Physics:0.1,Optics:0.2,Lasers:0,1,Physics:0.4,Science:0.1,"
+7,Uvod u računarstvo,i,1,,,,,,,,"Hardware:0.1,Microsoft Word:0.2,Microsoft Office:0.2,Microsoft Excel:0.2,"
+8,Praktikum iz Matematike 1,i,1,1,,,,,,,"Algebra:0.1,Linear Algebra:0.1,Calculus:0.1,Math, Science, Engineering:0.2,Math:0.3,"
+9,Praktikum iz Programiranja 1,i,1,1,,,,,,,"Low-Level Languages:0.3,Regular Expressions:0.1,Functional Programming:0.1,Assembly:0.1,Programming Languages:0.2,Problem Solving:0.2,Coding Practices:0.1,Software Developmen:0.1,Algorithms:0.1,Computer Science:0.1,Python:0.4,"
+10,Strani jezik 1,i,1,1,,,,,,,"English & Prose:0.9,"
+11,Praktikum iz Osnova elektrotehnike 1,i,1,,,,,,,,"Microelectronics:0.2,Electrical Engineering:0.2,"
+12,Sociologija,i,1,1,,,,,,,"Soft Skills:0.1,Professional Communication:0.2,Professional Development:0.1,Life-Work Balance:0.1,Leadership and Management:0.1,"
+13,Matematika 2,o,1,1,,,,,,,"Algebra:0.3,Linear Algebra:0.3,Calculus:0.3,Math, Science, Engineering:0.3,Math:0.6,"
+14,"Osnovi elektrotehnike 2	",o,1,,,,,,,,"Microelectronics:0.4,Engineering:0.1,Electrical Engineering:0.4,"
+15,Programiranje 2,o,1,1,,,,,,,"Regular Expressions:0.1,Functional Programming:0.1,Embedded Software:0.1,Programming Languages:0.2,Problem Solving:0.2,Embedded Systems:0.1,Software Developmen:0.2,Coding Practices:0.1,C:0.7,Algorithms:0.2,Computer Science:0.2,"
+16,Laboratorijske vežbe iz Osnova elektrotehnike,o,1,,,,,,,,"Microelectronics:0.2,Electrical Engineering:0.2,"
+17,Fizika 2,i,1,1,,,,,,,"Game Physics:0.1,Optics:0.8,Lasers:0.3,Physics:0.8,Science:0.1,"
+18,Osnovi računarske tehnike 1,i,1,1,,,,,,,"Programmable Logic Controllers:0.7,Hardware:0.2,Embedded Systems:0.05,"
+19,Praktikum iz Matematike 2,i,1,1,,,,,,,"Algebra:0.1,Linear Algebra:0.1,Calculus:0.1,Math, Science, Engineering:0.1,Math:0.3,"
+20,Uvod u elektroniku i digitalne sisteme,i,1,,,,,,,,"Programmable Logic Controllers:0.1,Hardware:0.4,Microcontrollers:0.1,Arduino:0.1,Fuel Cells:0.2,Raspberry Pi:0.2,Engineering:0.1,Electrical Engineering:0.2,"
+21,Praktikum iz Programiranja 2,i,1,1,,,,,,,"C:0.6,Regular Expressions:0.1,Functional Programming:0.1,Programming Languages:0.2,Problem Solving:0.2,Embedded Systems:0.1,Microsoft Visual Studio:0.1,Software Developmen:0.2,Coding Practices:0.1,Algorithms:0.2,Computer Science:0.2,"
+22,Strani jezik 2,i,1,1,,,,,,,"English & Prose:0.9,"
+23,"Praktikum iz Osnova elektrotehnike 2	",i,1,,,,,,,,"Microelectronics:0.2,Electrical Engineering:0.2,"
+24,Praktikum iz Fizike 2,i,1,,,,,,,,"Optics:0.1,Lasers:0.3,Physics:0.2,"
+25,Uvod u elektroenergetiku,i,1,,,,,,,,"Hardware:0.1,Mechanical Engineering:0.1,Arduino:0.1,Fuel Cells:0.2,Raspberry Pi:0.1,Engineering:0.1,Electrical Engineering:0.2,"
+26,"Pametni uređaji i komunikacije	",i,1,,,,,,,,"Ethernet:0.2,Network Administration:0.1,Hardware0.1,Microcontrollers:0.2,CCNA:0.1,Internet of Things (IoT):0.2,Cisco:0.1,"
+27,Uvod u menadžment,i,1,1,,,,,,,"Soft Skills:0.3,Professional Communication:0.2,Culture in Business:0.1,Business:0.1,Operational Risk:0.1,Professional Development:0.1,Career Development:0.1,Entrepreneurship:0.2,Leadership and Management:0.2,Business Strategy:0.2,Organizational Leadership:0.2,"
+28,Praktikum iz osnova računarske tehnike,i,,1,,,,,,,"Logic:0.2,Programmable Logic Controllers:0.8,Hardware:0.1,"
+29,Algoritmi i strukture podataka 1,o,,1,,,,,,,"Graph Analytics:0.3,Algorithms:0.9,"
+30,"Praktikum iz poslovne komunikacije i prezentacije	",i,,1,3,,,,,,"Soft Skills:0.3,Public Speaking:0.3,Presentation Skills:0.2,Personal Productivity:0.2,Professional Communication:0.2,Culture in Business:0.2,Business:0.1,Professional Development:0.2,"
+31,Računarsko modelovanje fizičkih pojava,i,,1,,,,,,,"Optics:0.2,Game Physics:0.4,Lasers:0.1,Physics:0.2,"
+32,Praktikum iz korišćenja računara,i,,1,,,,,,,"Hardware:0.1,Microsoft Word:0.2,Microsoft Excel:0.2,Microsoft Office:0.2,"
+33,Objektno-orijentisano programiranje 1,o,,2,2,2,2,3,2,,"Object-Oriented Architecture:0.6,C++:0.7,Algorithms:0.2,Coding Practices:0.4,Programming Languages:0.3,"
+34,Baze podataka 1,o,,2,3,3,2,,3,3,"Oracle Database Solutions:0.1,SQL:0.8,MySQL:0.3,Relational Databases:0.5,SQLite:0.3,"
+35,Osnovi računarske tehnike 2,o,,2,2,,,,3,,"Chips & Processors:0.2,Computer Processors:0.3,"
+36,Algoritmi i strukture podataka 2,o,,2,,,,,,,"C++:0.1,Algorithms:0.9,Coding Practices:0.2,Problem Solving:0.5,"
+37,Signali i sistemi,i,,2,2,2,2,2,2,2,"Digital Transformation:0.7,Signal Processing:0.9,"
+38,Numerička analiza i diskretna matematika,i,,2,2,2,,,3,,"Microsoft Excel:0.1,Math:0.5,Algorithms:0.2,"
+39,Principi modernih telekomunikacija(si),i,,2,,,,,,,"Wireless Technology:0.1,Internet of Things (IoT):0.2,Telecommunications:0.7,"
+40,"Operativni sistemi 1	",o,,2,2,3,,,3,3,"C++:0.2,Linux:0.2,Algorithms:0.2,z/OS:0.5,Parallel Computing:0.2,Unix:0.3,Vmware:0.2,Assembly:0.2,Operating Systems:0.9,"
+41,Arhitektura računara,o,,2,2,3,,,3,,"Enterprise Architecture:0.1,Chips & Processors:0.2,"
+42,Objektno-orijentisano programiranje 2,o,,2,2,2,,,3,,"Java:0.8,C#:0.2,Algorithms:0.2,Parallel Computing:0.2,Programming Languages:0.3,"
+43,"Računarske mreže 1	",o,,2,2,3,,,3,3,"Wireless Technology:0.1,Cisco:0.7,Network Security:0.3,DevOps:0.2,Computer Networking:0.8,Internet Protocols:0.2,TCP/IP:0.4,IPv6:0.2,"
+44,Veb dizajn,i,,2,,,,,,,"HTML:0.3,CSS:0.3,JavaScript:0.4,XML:0.2,PHP:0.2,React:0.3,Angular:0.3,Web Development:0.8,Web Design:0.8,"
+45,Verovatnoća i statistika,i,,2,2,2,2,2,2,2,"Statistics:0.6,Math:0.3,"
+46,Osnovi digitalne elektronike,i,,2,3,2,3,,2,,"Electrical Engineering:0.2,Digital Transformation:0.3,Chips & Processors:0.2,"
+47,Praktikum iz operativnih sistema,i,,2,2,3,,,3,,"Version Control System:0.3,Linux:0.4,Unix:0.4,Ubuntu:0.4,Git:0.6,"
+48,Praktikum iz objektno orijentisanog programiranja,i,,2,,,,,,,"C++:0.4,Object-Oriented Architecture:0.3,Java:0.3,Algorithms:0.2,"
+49,Informacioni sistemi 1,o,,3,4,3,,,3,,"Cloud Computing:0.3,Information Architecture:0.3,Service-Oriented Architecture (SOA):0.2,"
+50,Projektovanje softvera,o,,3,4,3,,,3,,"Software Architecture:0.3,Software Development:0.1,Design Patterns:0.9,Coding Practices:0.5,"
+51,Računarske mreže 2,i,,3,4,3,,,3,,"Wireless Technology:0.1,Windows Server:0.4,Cisco:0.6,Network Security:0.4,DevOps:0.2,Computer Networking:0.8,Internet Protocols:0.2,TCP/IP:0.2,IPv6:0.2,"
+52,Operativni sistemi 2,i,,3,3,3,,,3,,"C++:0.1,Algorithms:0.2,z/OS:0.5,Parallel Computing:0.2,Vmware:0.2,Assembly:0.2,Operating Systems:0.9,"
+53,Arhitektura i organizacija računara 1,i,,3,3,3,,,3,,"Enterprise Architecture:0.1,Embedded Systems:0.2,Chips & Processors:0.2,Hardware:0.2,"
+54,Testiranje softvera,i,,3,,,,,,,"Penetration Testing / Ethical Hacking:0.4,QA / Testing:0.8,Test-Driven Development (TDD):0.3,Selenium:0.4,"
+55,Neuralne mreže,i,,3,,4,,,3,3,"Supervised Learning:0.2,Artificial Intelligence:0.5,Natural Language Processing:0.4,TensorFlow:0.4,ML & AI:0.3,"
+56,Inteligentni sistemi,i,,3,4,3,,,3,,"Python:0.3,Machine Learning:0.6,Data Science:0.2,Deep Learning:0.5,Reinforcement Learning:0.3,ML & AI:0.3,"
+57,Konkurentno i distribuirano programiranje,o,,3,3,3,,,3,,"Java:0.3,Parallel Computing:0.8,Distributed Systems:0.8,"
+58,Principi softverskog inženjerstva,o,,3,,,,,,,"Project Management:0.1,"
+59,"Infrastruktura za elektronsko poslovanje	",i,,3,4,3,,,3,,"C#:0.4,.NET:0.6,ASP.NET:0.6,Node.js:0.2,Django:0.3,Google Cloud Platform (GCP):0.3,Cloud Deployment:0.2,"
+60,Sistemski softver,i,,3,3,2,,,3,,"z/OS:0.3,C:0.2,Embedded Systems:0.2,Chips & Processors:0.2,Hardware:0.2,Assembly:0.5,x86 Microprocessors:0.6,Compilers:0.6,Low-Level Languages:0.3,"
+61,Baze podataka 2,i,,3,4,3,,,3,,"Oracle Database Solutions:0.1,Microsoft Azure:0.3,Cloud Computing:0.3,MySQL:0.2,Relational Databases:0.3,SQLite:0.3,"
+62,Arhitektura i organizacija računara 2,i,,3,3,3,,,3,,"Enterprise Architecture:0.1,Hardware:0.4,"
+63,Upravljanje softverskim projektima,i,,3,3,3,,,3,,"Project Management:0.6,Business Strategy:0.2,"
+64,Softverski alati baza podataka,i,,3,4,3,,,3,,"Microsoft SQL Server:0.3,SQL:0.4,Cloud Computing:0.3,MySQL:0.3,MongoDB:0.4,"
+65,Računarska grafika,i,,3,4,3,,,3,,"Embedded Systems:0.2,Chips & Processors:0.2,OpenGL:0.7,"
+66,Paralelni računarski sistemi,i,,3,4,3,,,3,,"Control Systems:0.3,Embedded Systems:0.2,Parallel Computing:0.6,"
+67,Upravljanje u realnom vremenu,i,,3,,4,,3,3,,"Control Systems:0.2,Software Estimation:0.2,"
+68,Programski prevodioci 1,o,,4,4,3,,,3,,"C:0.3,Embedded Systems:0.5,Microcontrollers:0.2,Chips & Processors:0.2,Hardware:0.2,Assembly:0.5,x86 Microprocessors:0.6,Compilers:0.8,Low-Level Languages:0.3,"
+69,Mikroprocesorski sistemi,o,,4,4,3,,,3,,"Control Systems:0.2,Microcontrollers:0.1,x86 Microprocessors:0.4,Low-Level Languages:0.2,"
+70,Programiranje Internet aplikacija,o,,4,3,3,,,3,,"Spring:0.3,PHP:0.4,Node.js:0.5,WordPress:0.3,React:0.4,Angular:0.4,Web Development:0.6,Web Design:0.7,Django:0.4,MongoDB:0.2,Vue.js:0.2,TypeScript:0.2,"
+71,Informacioni sistemi 2,i,,4,,,,,3,,"Information Architecture:0.7,Hadoop:0.2,Service-Oriented Architecture (SOA):0.2,"
+72,Računarski VLSI sistemi,i,,4,4,3,,,3,,"Electrical Engineering:0.1,Embedded Systems:0.2,Microcontrollers:0.2,Chips & Processors:0.3,Hardware:0.3,VHDL:0.8,"
+73,Multiprocesorski sistemi,i,,4,4,3,,,3,,"Algorithms:0.2,Chips & Processors:0.3,"
+74,Programiranje mobilnih uređaja,i,,4,,,,,,,"Native Android Development:0.6,Mobile Devices / Computers:0.4,Kotlin:0.9,Mobile Development:0.5,"
+75,Inženjerski optimizacioni algoritmi,i,,4,,,,,,,"Algorithms:0.3,Software Estimation:0.7,Measuring IT / Software:0.4,"
+76,Zaštita podataka,o,,4,3,3,,,3,3,"Security:0.2,Securities:0.2,Network Security:0.2,Data Engineering:0.2,Data Security & Privacy:0.3,Application Security:0.3,Encryption / Cryptography:0.8,"
+77,Performanse računarskih sistema,o,,4,4,3,,,3,,"Algorithms:0.2,Software Estimation:0.6,Measuring IT / Software:0.4,"
+78,Algoritmi i strukture podataka,o,,,2,3,,,3,3,"C++:0.1,Algorithms:0.9,Problem Solving:0.6,"
+79,Strani jezik 4,i,,,2,2,2,,3,4,"English & Prose:0.8,"
+80,Teorija električnih kola,i,,,3,2,2,2,2,2,"Electrical Engineering:0.2,Digital Transformation:0.2,Signal Processing:0.2,"
+81,Osnovi analogne elektronike,i,,,3,2,2,,2,,"Electrical Engineering:0.2,Microelectronics:0.2,Digital Transformation:0.1,Chips & Processors:0.2,"
+82,Merni sistemi u računarstvu,i,,,3,3,,,3,,"Python:0.1,LaTeX:0.1,Raspberry Pi:0.4,Arduino:0.5,Microcontrollers:0.4,Signal Processing:0.2,"
+83,Strani jezik 3,i,,,3,2,2,,2,4,"English & Prose:0.8,"
+84,Praktikum iz računarskih alata u matematici,i,,,3,,,,3,,"LaTeX:0.1,Digital Transformation:0.2,MATLAB:0.3,"
+85,Osnovi telekomunikacija,o,,,3,2,,2,2,2,"Electrical Engineering:0.1,Digital Transformation:0.3,Telecommunications:0.8,"
+86,Digitalna obrada signala,i,,,3,3,,,3,3,"Electrical Engineering:0.1,Microelectronics:0.1,Digital Transformation:0.7,MATLAB:0.2,Signal Processing:0.7,"
+87,Principi modernih telekomunikacija(ir),i,,,3,,,,3,,"Python:0.2,Machine Learning:0.3,Raspberry Pi:0.2,Internet of Things (IoT):0.2,Arduino:0.2,Telecommunications:0.3,Data Engineering:0.3,Microcontrollers:0.2,ML & AI:0.3,Recommender Systems:0.3,"
+88,Elektromagnetika,i,,,3,2,2,2,2,3,"Electrical Engineering:0.2,Microelectronics:0.2,Digital Transformation:0.4,Signal Processing:0.2,Hardware:0.2,"
+89,Analogni električni filteri,i,,,3,3,,,3,,"Electrical Engineering:0.2,Microelectronics:0.3,Digital Transformation:0.4,Signal Processing:0.3,"
+90,Matematika 3,o,,,,2,2,2,2,2,
+91,Objektno orijentisano programiranje,i,,,,2,2,,2,3,
+92,Osnovi fizičke elektronike,i,,,,2,,,2,2,
+93,Električna merenja,i,,,,2,2,,2,2,
+94,Dinamika mehaničkih sistema,i,,,,2,,,3,,
+95,Organizacija računara,i,,,,2,,,2,,
+96,Praktikum iz računarske analize kola,i,,,,2,2,,2,,
+97,Računarski praktikum iz matematike 3,i,,,,2,2,,3,,
+98,Praktikum iz organizacije računara,i,,,,2,,,3,,
+99,Složenost algoritama i odabrane metode optimizacije,i,,,,2,,,2,2,
+100,Diferencijalne jednačine,i,,,,2,2,,2,,
+101,Jednačine matematičke fizike,i,,,,2,,,2,,
+102,Numerička matematika,i,,,,2,2,2,2,2,
+103,Odabrana poglavlja iz realne i kompleksne analize,i,,,,2,2,,2,,
+104,Praktikum iz softverskih alata,i,,,,2,,,3,,
+105,Praktikum iz merno-akvizicionih sistema,i,,,,2,,,2,,
+106,Sistemi automatskog upravljanja 1,o,,,,3,,,3,,
+107,Stohastički sistemi i estimacija,o,,,,3,,,3,,
+108,Senzori i aktuatori,i,,,,3,,,3,,
+109,Hidraulički i pneumatički sistemi,i,,,,3,,,3,,
+110,Sistemi i signali u organizmu,i,,,,3,,,3,3,
+111,Praktikum iz digitalnih signalnih procesora,i,,,,3,,4,3,,
+112,Matematičke osnove automatskog rezonovanja,i,,,,3,,,3,,
+113,Praktikum iz digitalne obrade signala,i,,,,3,,,3,,
+114,Sistemi automatskog upravljanja 2,o,,,,3,,,3,,
+115,Električne mašine,i,,,,3,,2,3,,
+116,Upravljanje elektromotornim pogonima,i,,,,3,,,3,,
+117,Spektralna analiza signala,i,,,,3,,,3,,
+118,Nelinearni sistemi upravljanja,i,,,,3,,,3,,
+119,Modeliranje i identifikacija procesa,i,,,,3,,,3,,
+120,Robotika i automatizacija,i,,,,3,,3,3,3,
+121,Akvizicija elektrofizioloških signala,i,,,,3,,,3,3,
+122,Radiološka i nuklearna medicinska tehnika,i,,,,3,,,3,,
+123,Ekonomija i menadžment,i,,,,3,,,3,,
+124,Prepoznavanje oblika,i,,,,4,,,3,3,
+125,Digitalna obrada slike,i,,,,4,,,3,4,
+126,Automatsko vođenje objekata u prostoru,i,,,,4,,,3,,
+127,CNC sistemi i fleksibilna automatizacija,i,,,,4,,,3,,
+128,Namenski računarski sistemi,i,,,,4,4,,3,4,
+129,Internet programiranje,i,,,,4,4,,3,3,
+130,Nelinearni sistemi upravljanja 2,i,,,,4,,,3,,
+131,Metode analize elektrofizioloških signala,i,,,,4,,,4,3,
+132,Kliničko inženjerstvo,i,,,,4,,,4,3,
+133,Multivarijabilni sistemi upravljanja,i,,,,4,,,3,,
+134,Veštačka inteligencija,i,,,,4,,,3,,
+135,Obrada i prepoznavanje govora,i,,,,4,,,3,3,
+136,Adaptivni sistemi za upravljanje i obradu signala,i,,,,4,,,3,,
+137,"Autonomni mobilni roboti	",i,,,,4,,,3,,
+138,Digitalno upravljanje pretvaračima i pogonima,i,,,,4,,,3,,
+139,Programiranje u realnom vremenu,i,,,,4,,,3,,
+140,Upravljanje industrijskim procesima,i,,,,4,,,3,3,
+141,Analiza biomedicinske slike,i,,,,4,,,3,,
+142,Osnovi i primena Interneta,o,,,,3,2,,3,,
+143,Elementi IKT sklopova,i,,,,3,2,,3,,
+144,Praktikum softverski alati 1,i,,,,3,2,,3,,
+145,Telekomunikacione mreže,o,,,,3,2,,3,,
+146,Telekomunikacije 1,o,,,,3,2,,3,,
+147,Arhitektura informaciono-komunikacionih sistema,o,,,,3,2,,3,,
+148,Elementi diskretne matematike u telekomunikacijama,i,,,,3,2,,3,,
+149,Praktikum softverski alati 2,i,,,,3,2,,3,,
+150,Obrada signala 1,o,,,,3,3,,3,,
+151,Telekomunikacije 2,o,,,,3,3,,3,,
+152,Teorija informacija i kodovanje,o,,,,3,3,,3,3,
+153,Primena objektnog programiranja u mrežama,o,,,,3,3,,3,,
+154,Elektroakustika,i,,,,3,3,,3,3,
+155,Telekomunikaciona merenja,i,,,,3,3,,3,,
+156,Sistemi za obradu slike,i,,,,3,3,,3,,
+157,Osnovi sistema upravljanja,i,,,,3,3,,3,3,
+158,Mikrotalasna tehnika,i,,,,3,3,,3,3,
+159,Antene i prostiranje,i,,,,3,3,,3,,
+160,Radio komunikacije,o,,,,3,3,,3,,
+161,Komunikacione tehnologije,o,,,,3,3,,3,,
+162,Mrežna administracija i programiranje,o,,,,3,3,,3,,
+163,Osnovi govorne komunikacije,i,,,,3,3,,3,,
+164,"Audio sistemi	",i,,,,3,3,,3,3,
+165,Video tehnologije i sistemi,i,,,,3,3,,3,,
+166,Usmerene radio veze,i,,,,3,3,,3,,
+167,Slučajni procesi u telekomunikacijama,i,,,,3,3,,3,,
+168,Optoelektronske telekomunikacione komponente,i,,,,3,3,,3,,
+169,Softverski alati za projektovanje antena,i,,,,3,3,,3,,
+170,Mikrotalasna pasivna kola,i,,,,3,3,,3,3,
+171,Optičke i bežične mreže,o,,,,3,4,,3,,
+172,Radio sistemi,o,,,,3,4,,3,,
+173,Komutacioni sistemi,o,,,,3,4,,3,,
+174,Razvoj mobilnih servisa,i,,,,3,4,,3,,
+175,IoT mreže,i,,,,3,4,,3,,
+176,Obrada signala 2,i,,,,3,4,,3,,
+177,Algoritmi za dinamičku optimizaciju,i,,,,3,4,,3,,
+178,Mikrotalasna merenja,i,,,,3,4,,3,,
+179,Mikrotalasna elektronika,i,,,,3,4,,3,3,
+180,Mrežna bezbednost,o,,,,3,4,,3,,
+181,Javni mobilni sistemi,i,,,,3,4,,3,,
+182,Programiranje komunikacionog hardvera,i,,,,3,4,,3,,
+183,Arhitektura Interneta,i,,,,3,4,,3,,
+184,"Principi pozicioniranja u radio sistemima	",i,,,,3,4,,3,,
+185,Modeliranje i simulacija u telekomunikacijama,i,,,,3,4,,3,,
+186,"Programiranje multiprocesorskih platformi za inženjerske aplikacije	",i,,,,3,4,,3,,
+187,Elektromagnetska kompatibilnost,i,,,,3,4,,3,3,
+188,Mehanika,o,,,,3,,2,3,,
+189,Električna merenja 1,o,,,,3,,2,3,,
+190,Elektroenergetske instalacije niskog napona,o,,,,3,,2,3,,
+191,Primenjena fizika u elektroenergetici,i,,,,3,,2,3,,
+192,Prenos toplote,i,,,,3,,2,3,,
+193,Praktikum iz računarske analize trofaznih kola,i,,,,3,,2,3,,
+194,Praktikum iz softverskih alata u elektroenergetici,i,,,,3,,2,3,,
+195,Obrtne mašine za naizmeničnu struju,o,,,,3,,3,3,,
+196,Energetski transformatori,o,,,,3,,3,3,,
+197,Elementi elektroenergetskih sistema,o,,,,3,,3,3,,
+198,Sistemi automatskog upravljanja,o,,,,3,,3,3,,
+199,Tehnika visokog napona 1,o,,,,3,,3,3,,
+200,Energetski pretvarači 1,o,,,,3,,3,3,,
+201,Razvodna postrojenja,o,,,,3,,4,3,,
+202,Elektromotorni pogoni,o,,,,3,,4,3,,
+203,Relejna zaštita ,o,,,,3,,4,3,,
+204,Analiza elektroenergetskih sistema 2,i,,,,3,,3,3,,
+205,Tehnika visokog napona 2,i,,,,3,,3,3,,
+206,Električna merenja 2,i,,,,3,,3,3,,
+207,Električna merenja neelektričnih veličina,i,,,,3,,3,3,,
+208,Kvalitet električne energije,i,,,,3,,3,3,,
+209,Obnovljivi izvori energije,i,,,,3,,3,3,,
+210,Elektrane,i,,,,3,,3,3,,
+211,Tržište električne energije i deregulacija,i,,,,3,,3,3,,
+212,Projektovanje pomoću računara u elektronergetici,i,,,,3,,3,3,,
+213,Opšta energetika,i,,,,3,,3,3,,
+214,Visokonaponska oprema,i,,,,3,,3,3,,
+215,Električno osvetljenje,i,,,,3,,3,3,,
+216,Električne instalacije niskog napona 2,i,,,,3,,3,3,,
+217,Višemotorni pogoni,i,,,,3,,3,3,,
+218,Regulacija elektromotornih pogona,i,,,,3,,3,3,,
+219,Energetski pretvarači 2,i,,,,3,,3,3,,
+220,Upravljanje energetskim pretvaračima,i,,,,3,,3,3,,
+221,Digitalno upravljanje pretvaračima i pogonima,i,,,,3,,3,3,3,
+222,Električna vozila,i,,,,3,,3,3,,
+223,Zagrevanje i zaštita električnih mašina,i,,,,3,,3,3,,
+224,Ispitivanje električnih mašina,i,,,,3,,3,3,,
+225,Električne mašine za jednosmernu struju,i,,,,3,,3,3,3,
+226,Specijalne električne instalacije,i,,,,3,,3,3,,
+227,Energetski efikasni elektrotermički procesi,i,,,,3,,3,3,,
+228,Softverski alati u elektroenergetici,i,,,,3,,3,3,,
+229,Opšti inženjering,i,,,,3,,3,3,,
+230,Analiza električnih mašina metodom konačnih elemenata,i,,,,3,,3,3,,
+231,Obrtne mašine za naizmeničnu struju 2,i,,,,3,,3,3,,
+232,Materijali u elektroenergetici,i,,,,3,,3,3,,
+233,Praktikum iz elemenata elektroenergetskih sistema,i,,,,3,,4,3,,
+234,Praktikum iz analize elektroenergetskih sistema,i,,,,3,,4,3,,
+235,Praktikum - Laboratorijske vežbe iz elektroenergetskih sistema,i,,,,3,,4,3,,
+236,Praktikum iz elektromotornih pogona,i,,,,3,,4,3,,
+237,Praktikum iz regulacije elektromotornih pogona,i,,,,3,,4,3,,
+238,Distributivne i industrijske mreže,i,,,,3,,4,3,,
+239,Termički procesi u elektroenergetici,i,,,,3,,4,3,,
+240,Materijali u elektrotehnici,i,,,,3,,,2,,
+241,Praktikum iz savremenih materijala i tehnologija,i,,,,3,,,2,,
+242,Kvantna mehanika,o,,,,3,,,2,,
+243,Fizičke osnove elektrodinamike,i,,,,3,,,2,,
+244,Praktikum iz konstruisanja elektronskih uređaja,i,,,,3,,,2,,
+245,Fizičko tehnička merenja,i,,,,3,,,3,,
+246,Optoelektronika,i,,,,3,,,3,3,
+247,Fizička elektronika čvrstog tela,i,,,,3,,,3,,
+248,Statistička fizika,i,,,,3,,,3,,
+249,Elementi elektronskih uređaja,i,,,,3,,,3,,
+250,Kvantna elektronika,i,,,,3,,,3,,
+251,Mikroelektronika i nanoelektronika,i,,,,3,,,3,,
+252,Optičke telekomunikacije,i,,,,3,,,3,3,
+253,Mikroelektronska kola,i,,,,3,,,3,,
+254,Senzori i pretvarači,i,,,,3,,,3,3,
+255,Prostiranje optičkih talasa,i,,,,3,,,3,,
+256,Optoelektronske naprave,i,,,,3,,,4,,
+257,Sistemi za digitalnu obradu slike,i,,,,3,,,4,,
+258,Poluprovodničke kvantne nanostrukture,i,,,,3,,,4,,
+259,Analiza i modelovanje poluprovodničkih naprava,i,,,,3,,,4,,
+260,Fiberoptički senzori,i,,,,3,,,4,,
+261,Optičke telekomunikacije 2,i,,,,3,,,4,,
+262,Fizička elektronika gasova i plazme,i,,,,3,,,4,,
+263,Namenski računarski sistemi,i,,,,3,,,4,,
+264,Laserska tehnika,i,,,,3,,,4,,
+265,Optičke mreže,i,,,,3,,,4,,
+266,Nanoelektronske naprave,i,,,,3,,,4,,
+267,Optoelektronski i laserski merni sistemi,i,,,,3,,,4,,
+268,Mikroelektromehanički sistemi,i,,,,3,,,4,3,
+269,Nuklearna fizika,o,,,,3,,,3,,
+270,Biomaterijali,o,,,,3,,,3,,
+271,Detekcija i merenje jonizujućeg zračenja,o,,,,3,,,3,,
+272,Osnovi biofizike,o,,,,3,,,3,,
+273,Sistemi odlučivanja u medicini,i,,,,3,,,3,,
+274,Metode formiranja medicinske slike,o,,,,3,,,4,,
+275,Bioinformatika,o,,,,3,,,4,,
+276,Primena lasera u medicini,i,,,,3,,,4,,
+277,Biomehanika,i,,,,3,,,4,,
+278,Dozimetrija i zaštita od zračenja,o,,,,3,,,4,,
+279,Nuklearna tehnika,o,,,,3,,,4,,
+280,Ekološki obnovljivi izvori energije,i,,,,3,,,4,3,
+281,Fizički i tehnički principi funkcionisanja fuzionih reaktora,i,,,,3,,,4,,
+282,Elektronika,o,,,,,,,,2,
+283,Digitalna elektronika 1,o,,,,,,,,2,
+284,Praktikum iz softverskih alata u elektronici,i,,,,,,,,2,
+285,Praktikum iz mikrokontrolera,i,,,,,,,,2,
+286,Analogna elektronika 1,o,,,,,,,,2,
+287,Digitalna elektronika 2,o,,,,,,,,2,
+288,Analogna elektronika 2,o,,,,,,,,3,
+289,Arhitektura i organizacija namenskih računara,o,,,,,,,,3,
+290,Projektovanje VLSI sistema,o,,,,,,,,3,
+291,Energetska elektronika,i,,,,,,,,3,
+292,Linearna elektronika,i,,,,,,,,3,
+293,Računarska elektronika,i,,,,,,,,3,
+294,Projektovanje integrisanih kola,i,,,,,,,,3,
+295,Mikrokontrolerski računarski sistemi,i,,,,,,,,3,
+296,Merni sistemi,i,,,,,,,,3,
+297,Projektovanje elektronskih sistema,i,,,,,,,,3,
+298,Digitalni VLSI sistemi,i,,,,,,,,4,
+299,Razvoj namenskog softvera,i,,,,,,,,4,
+300,Analogna integrisana kola,i,,,,,,,,4,
+301,Analiza i modelovanje elektronskih kola upotrebom HDL - AMS jezika,i,,,,,,,,4,
+302,Elektronska instrumentacija,i,,,,,,,,4,
+303,Hardversko - softverska obrada signala,i,,,,,,,,4,
+304,Sistemi u realnom vremenu,i,,,,,,,,4,
+305,Operativni sistemi namenskih računara 1,i,,,,,,,,4,
+306,RF elektronika,i,,,,,,,,4,
+307,Verifikacija hardvera u digitalnim integrisanim sistemima,i,,,,,,,,4,
