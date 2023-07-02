@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}bookMentor.rs | Search books{% endblock %}
+{% block content %}
+    {% if query %}
+        <h1>Books containing "{{ query }}"</h1>
+        <h3>
+            {% with results.count as total_results %}
+                Found {{ total_results }} result{{ total_results|pluralize }}.
+                <a href="{% url "books:book_search" %}">Search again?</a>
+            {% endwith %}
+        </h3>
+        {% for book in results %}
+            <h2>
+                <a href="{{ book.get_absolute_url }}">
+                    {{ book.isbn }} | {{ book.title }}
+                </a>
+            </h2>
+            <p>Written by {% for author in book.authors %}
+                {{ author }}{% if not forloop.last %},{% endif %}</p>{% endfor %}
+            <hr>
+        {% empty %}
+            <p>There's no match for the given query.</p>
+        {% endfor %}
+    {% else %}
+        <h1>Search for Books</h1>
+        <form method="get">
+            {{ form.as_p }}
+            <input type="submit" value="Search">
+        </form>
+    {% endif %}
+{% endblock %}

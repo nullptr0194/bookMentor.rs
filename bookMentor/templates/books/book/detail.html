@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}bookMentor.rs | {{ book.title }}{% endblock %}
+{% block content %}
+    <h2>{{ book.title }}</h2>
+    <img src="{{ book.cover_url }}" alt="Book Cover" width="300" height="400">
+    <p>Written by <b>{% for author in book.authors %}
+        {{ author }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    </b></p>
+    <p>Published by <b>{% for publisher in book.publishers %}
+        {{ publisher }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    </b></p>
+    <p>Topic: <b>{{ book.topic }}</b></p>
+    <p>Issued: <b>{{ book.issued }}</b></p>
+
+    <div>
+        {% if request.user.is_authenticated %}
+            {% if book not in request.user.profile.books.all %}
+                <p><a href="{% url "books:book_added" book.isbn %}">Add book as read</a></p>
+            {% else %}
+                <h4>You've already read this book!</h4>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <hr>
+    <h3>About:</h3>
+    <br>
+    {{ book.description|safe }}
+{% endblock %}
