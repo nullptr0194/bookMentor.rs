@@ -93,16 +93,53 @@ def build(ratings, userID, save=True):
             if profile.pk == id_slicnog:
                 for book in profile.books.all():
                     if book in candidate_books:
-                        candidate_books[book] += 1
+                        candidate_books[book] += 1.2
                     else:
-                        candidate_books[book] = 1
+                        candidate_books[book] = 1.2
 
     return candidate_books
 
 
 def get_books_from_dict(dict):
+    i = 0
     titles = []
     for book_object in dict.keys():
+        if i == 15:
+            break
         titles.append(book_object.title)
+        i = i + 1
     return Book.objects.all().filter(title__in=titles)
+
+
+def get_most_popular_books_by_topics(features):
+    # books_by_topics = Book.objects.all().filter(topic__in=features).order_by('-popularity')
+    # return books_by_topics
+    books = []
+    for feature in features:
+        instances = Book.objects.all().filter(topic=feature).order_by('-popularity')
+        if len(instances) < 3:
+            cnt = len(instances)
+        else:
+            cnt = 3
+        instances = instances[:cnt]
+        for book in instances:
+            books.append(book)
+    return books
+
+
+def description_rec(ratings, userID, candidate_books, save=True):
+    user_ratings = ratings.loc[userID]  # ratings je u stvari red za usera
+    user_grades = user_ratings.values
+
+    N = int(len(user_ratings) * 0.1)  # top 10% feature book
+    top_indices = np.argsort(user_grades)[::-1][:N]
+
+    top_features = list(ratings.columns[top_indices])
+
+    books = get_most_popular_books_by_topics(top_features)
+    for book in books:
+        if book in candidate_books:
+            candidate_books[book] += 1
+        else:
+            candidate_books[book] = 1
 

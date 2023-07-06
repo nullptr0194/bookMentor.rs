@@ -9,6 +9,7 @@ from account.algorithms import *
 import os
 from books.models import Book
 
+
 def register(request):
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
@@ -125,7 +126,9 @@ def recommend(request):
     data.set_index('profile', inplace=True)
     data = data.iloc[:, 1:]
     # print(data)
-    recommended_books_dict = build(data, profile)  # knjige preporucene korisniku u vidu recnika
+    recommended_books_dict = build(data, profile)
+    description_rec(data, profile, recommended_books_dict)
+    # recommended_books_dict = sorted(recommended_books_dict.values(), key=lambda x: x)
     object_recommended_books = get_books_from_dict(recommended_books_dict)
     paginator = Paginator(object_recommended_books, 5)
     page = request.GET.get('page')
@@ -136,3 +139,4 @@ def recommend(request):
     except EmptyPage:
         recommended_books = paginator.page(paginator.num_pages)
     return render(request, 'account/recommend/recommend.html', {'page': page, 'recommended_books': recommended_books})
+
