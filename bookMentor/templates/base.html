@@ -21,20 +21,79 @@
         </ul>
     {% endif %}
 </div>
-<div class="header">
-    {% if request.user.is_authenticated %}
-        <h2>Good day <a href="{% url "account:dashboard" %}">{{ request.user.first_name }}</a>!</h2>
-        <p><a href="{% url "account:logout" %}">Logout</a></p>
-    {% else %}
-        <p><a href="{% url "account:login" %}">Login</a></p>
-    {% endif %}
-</div>
-<h3>Check all available books <a href="{% url "books:book_list" %}">here</a>.</h3>
-<h3>Check all available courses <a href="{% url "books:course_list" %}">here</a>.</h3>
-<hr>
+{#<div class="header">#}
+{#    {% if request.user.is_authenticated %}#}
+{#        <h2>Good day <a href="{% url "account:dashboard" %}">{{ request.user.first_name }}</a>!</h2>#}
+{#        <p><a href="{% url "account:logout" %}">Logout</a></p>#}
+{#    {% else %}#}
+{#        <p><a href="{% url "account:login" %}">Login</a></p>#}
+{#    {% endif %}#}
+{#</div>#}
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarCenteredExample"
+                    aria-controls="navbarCenteredExample"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Collapsible wrapper -->
+            <div
+                    class="collapse navbar-collapse justify-content-center"
+                    id="navbarCenteredExample"
+            >
+                <!-- Left links -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#"><b>bookMentor.rs</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "books:book_list" %}">All Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "books:course_list" %}">All Courses</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url "account:dashboard" %}">{{ request.user.first_name }}'s
+                                Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url "account:logout" %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url "account:login" %}">Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<br>
+<br>
 <br>
 {% block content %}{% endblock %}
-
+<br>
+<br>
+<br>
+<footer class="bg-light text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-dark" href="{% url "books:book_list" %}">bookMentor.rs</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>

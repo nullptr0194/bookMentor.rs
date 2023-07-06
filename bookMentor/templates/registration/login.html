@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block title %}bookMentor.rs | Login{% endblock %}
 {% block content %}
-    <h1>Login</h1>
+    <h1 class="text-center">Login</h1>
     {% if form.errors %}
         <p>Your username and password didn't match. Please enter proper credentials.</p>
     {% else %}
-        <p>Login using the form bellow. If you don't have an account, <a
-                href="{% url "account:register" %}">register</a></p>
+        <h4>Login using the form bellow. If you don't have an account, <a
+                href="{% url "account:register" %}">register!</a></h4><br>
     {% endif %}
     <div>
         <form action="{% url 'account:login' %}" method="post">

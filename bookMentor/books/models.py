@@ -26,25 +26,25 @@ class Book(models.Model):
         return self.title
 
 
-def get_courses_by_module(module, year):
+def get_courses_by_module(module, year, profile):
     if module is None or year is None:
         return Course.objects.all()
     if module == 'er':
-        return Course.objects.all().filter(er=True)
+        return Course.objects.all().filter(er=True).exclude(gradedcourse__profile=profile)
     elif module == 'si':
-        return Course.objects.all().filter(simingod__lte=year)
+        return Course.objects.all().filter(simingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'ir':
-        return Course.objects.all().filter(irmingod__lte=year)
+        return Course.objects.all().filter(irmingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'os':
-        return Course.objects.all().filter(osmingod__lte=year)
+        return Course.objects.all().filter(osmingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'ot':
-        return Course.objects.all().filter(otmingod__lte=year)
+        return Course.objects.all().filter(otmingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'og':
-        return Course.objects.all().filter(ogmingod__lte=year)
+        return Course.objects.all().filter(ogmingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'of':
-        return Course.objects.all().filter(ofmingod__lte=year)
+        return Course.objects.all().filter(ofmingod__lte=year).exclude(gradedcourse__profile=profile)
     elif module == 'oe':
-        return Course.objects.all().filter(oemingod__lte=year)
+        return Course.objects.all().filter(oemingod__lte=year).exclude(gradedcourse__profile=profile)
     else:
         return Course.objects.all()
 
@@ -74,7 +74,7 @@ class Course(models.Model):
         tags = {}
         for topic in self.topics:
             vals = topic.split(':')
-            tags.update({vals[0]: vals[1]})
+            tags.update({vals[0]: float(vals[1])})
         return tags
 
     def get_absolute_url(self):

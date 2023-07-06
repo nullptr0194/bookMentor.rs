@@ -5,7 +5,9 @@ from .forms import UserRegistrationForm, UserEditForm, ProfileEditForm, AddCours
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from books.models import get_courses_by_module, Course
-
+from account.algorithms import *
+import os
+from books.models import Book
 
 def register(request):
     if request.method == 'POST':
@@ -18,6 +20,9 @@ def register(request):
             prof.books.clear()
             prof.save()
             return render(request, 'account/register_done.html', {'new_user': new_user})
+        else:
+            user_form = UserRegistrationForm()
+            return render(request, 'account/register.html', {'user_form': user_form})
     else:
         user_form = UserRegistrationForm()
         return render(request, 'account/register.html', {'user_form': user_form})
@@ -63,7 +68,7 @@ def book_list(request):
 def course_list(request):  # smer i godina su bitni da se uzmu, na osnovu njih dobiti sve kurseve
     module = request.user.profile.smer
     year = request.user.profile.godina
-    object_list = get_courses_by_module(module, year)
+    object_list = get_courses_by_module(module, year, request.user.profile)
     paginator = Paginator(object_list, 10)
     page = request.GET.get('page')
     try:
@@ -86,6 +91,9 @@ def course_detail(request, kurs):
             grade = int(course_form.cleaned_data['grade'])
             graded_course = GradedCourse(profile=request.user.profile, course=course, grade=grade)
             graded_course.save()
+            path = os.path.join('static', 'profile_coefficients.csv')
+            update_csv(path, request.user.profile.pk,
+                       graded_course.course.get_topics_dict(), grade)
             messages.success(request, 'Added successfully!')
         else:
             messages.error(request, 'Error while updating.')
@@ -107,3 +115,24 @@ def course_mine(request):
     except EmptyPage:
         courses = paginator.page(paginator.num_pages)
     return render(request, 'account/courses/list_mine.html', {'page': page, 'graded_courses': courses})
+
+
+@login_required
+def recommend(request):
+    profile = request.user.profile.pk
+    path = os.path.join('static', 'profile_coefficients.csv')
+    data = pd.read_csv(path, low_memory=False)
+    data.set_index('profile', inplace=True)
+    data = data.iloc[:, 1:]
+    # print(data)
+    recommended_books_dict = build(data, profile)  # knjige preporucene korisniku u vidu recnika
+    object_recommended_books = get_books_from_dict(recommended_books_dict)
+    paginator = Paginator(object_recommended_books, 5)
+    page = request.GET.get('page')
+    try:
+        recommended_books = paginator.page(page)
+    except PageNotAnInteger:
+        recommended_books = paginator.page(1)
+    except EmptyPage:
+        recommended_books = paginator.page(paginator.num_pages)
+    return render(request, 'account/recommend/recommend.html', {'page': page, 'recommended_books': recommended_books})

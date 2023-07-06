@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block title %}bookMentor.rs | Dashboard{% endblock %}
 {% block content %}
-    <h1>Dashboard</h1>
+    <h1 class="text-center">Dashboard</h1>
     <br>
-    <h2>Welcome to your dashboard.</h2>
+    <h2 class="text-center">Welcome to your dashboard, {{ request.user.first_name }}.</h2>
     <br>
     <ul>
-        <li>Edit your personal informations <a href="{% url "account:edit" %}">here</a>.</li>
-        <li>View your books <a href="{% url "account:book_list" %}">here</a>.</li>
-        <li>View available courses for assessment <a href="{% url "account:course_list" %}">here</a>.</li>
-        <li>View your graded courses <a href="{% url "account:course_mine" %}">here</a>.</li>
+        <li><h4>Edit your personal informations <a href="{% url "account:edit" %}">here</a>.</h4></li>
+        <li><h4>View your books <a href="{% url "account:book_list" %}">here</a>.</h4></li>
+        <li><h4>View available courses for assessment <a href="{% url "account:course_list" %}">here</a>.</h4></li>
+        <li><h4>View your graded courses <a href="{% url "account:course_mine" %}">here</a>.</h4></li>
+        <li><h4>Are you ready for <a href="{% url "account:recommend" %}">book recommendation</a>?</h4></li>
     </ul>
 {% endblock %}

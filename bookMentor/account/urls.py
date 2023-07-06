@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'account'
 
-urlpatterns = [  # ova 2 patha treba zameniti sa include('django.contrib.auth.urls')
+urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('', views.dashboard, name='dashboard'),
     path('register/', views.register, name='register'),
@@ -13,4 +13,5 @@ urlpatterns = [  # ova 2 patha treba zameniti sa include('django.contrib.auth.ur
     path('courses/', views.course_list, name='course_list'),
     path('courses/<str:kurs>/', views.course_detail, name='course_detail'),
     path('courses/my-courses/list/', views.course_mine, name='course_mine'),
+    path('recommend/', views.recommend, name='recommend'),
 ]

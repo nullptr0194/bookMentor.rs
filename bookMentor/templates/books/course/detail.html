@@ -1,38 +1,42 @@
 {% extends "base.html" %}
 {% block title %}bookMentor.rs | {{ course.kurs }}{% endblock %}
 {% block content %}
-    <h2>{{ course.kurs }}</h2>
+    <h2 class="text-center">{{ course.kurs }}</h2>
     <br>
-    <table style="border:1px solid black; width: 100%">
-        <tr>
-            <th>Obavezan/Izborni</th>
-            <th>Prva godina ER?</th>
-            <th>Dostupan najranije na SI</th>
-            <th>Dostupan najranije na IR</th>
-            <th>Dostupan najranije na OS</th>
-            <th>Dostupan najranije na OT</th>
-            <th>Dostupan najranije na OG</th>
-            <th>Dostupan najranije na OF</th>
-            <th>Dostupan najranije na OE</th>
-        </tr>
-        <tr>
-            <td>{{ course.o_i }}</td>
-            <td>{{ course.er }}</td>
-            <td>{{ course.simingod }}</td>
-            <td>{{ course.irmingod }}</td>
-            <td>{{ course.osmingod }}</td>
-            <td>{{ course.otmingod }}</td>
-            <td>{{ course.ogmingod }}</td>
-            <td>{{ course.ofmingod }}</td>
-            <td>{{ course.oemingod }}</td>
-        </tr>
-    </table>
+    <div class="container-fluid">
+        <table class="table table-light table-striped">
+            <tr>
+                <th>Obavezan/Izborni</th>
+                <th>Prva godina ER?</th>
+                <th>Dostupan najranije na SI</th>
+                <th>Dostupan najranije na IR</th>
+                <th>Dostupan najranije na OS</th>
+                <th>Dostupan najranije na OT</th>
+                <th>Dostupan najranije na OG</th>
+                <th>Dostupan najranije na OF</th>
+                <th>Dostupan najranije na OE</th>
+            </tr>
+            <tr>
+                <td>{{ course.o_i }}</td>
+                <td>{{ course.er }}</td>
+                <td>{{ course.simingod }}</td>
+                <td>{{ course.irmingod }}</td>
+                <td>{{ course.osmingod }}</td>
+                <td>{{ course.otmingod }}</td>
+                <td>{{ course.ogmingod }}</td>
+                <td>{{ course.ofmingod }}</td>
+                <td>{{ course.oemingod }}</td>
+            </tr>
+        </table>
+    </div>
     <br>
-    <h3>Topics:</h3>
-    <ul>
-        {% for topic in course.topics %}
-            <li>{{ topic }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container-fluid">
+        <h3>Topics:</h3>
+        <ul>
+            {% for topic in course.topics %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+    </div>
     <br>
 {% endblock %}

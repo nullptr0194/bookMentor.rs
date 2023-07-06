@@ -12,6 +12,9 @@ SECRET_KEY = ''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_URL = '/account/login'
+
+LOGIN_REDIRECT_URL = '/account/'
 LOGIN_REDIRECT_URL = '/account/'
 
 ALLOWED_HOSTS = []

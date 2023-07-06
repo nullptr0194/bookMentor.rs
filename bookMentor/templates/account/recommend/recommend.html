@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}bookMentor.rs | Recommendation{% endblock %}
+{% block content %}
+    <h1>Recommended books for you</h1>
+    <br>
+    {% for book in recommended_books %}
+        <h2>
+            <a href="{{ book.get_absolute_url }}">
+                {{ book.isbn }} | {{ book.title }}
+            </a>
+        </h2>
+        <p>Written by {% for author in book.authors %}
+            {{ author }}{% if not forloop.last %},{% endif %}
+        {% endfor %}
+        </p>
+        <hr>
+        {% empty %}
+        <h3>Oops! Error occurred :(</h3>
+    {% endfor %}
+    {% include "pagination.html" with page=recommended_books %}
+{% endblock %}
