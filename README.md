@@ -1,5 +1,5 @@
 # bookMentor.rs
-## ***Python django web app for students of electrical engineering.***
+## ***Recommender system for students of electrical engineering, realised as a django web app***
 
 ## Overview
 
