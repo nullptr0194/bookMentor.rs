@@ -2,23 +2,28 @@
 {% block title %}bookMentor.rs | All Books{% endblock %}
 {% block content %}
     <h1 class="text-center">Books</h1>
+    <br>
     <h2 class="text-center">Search for given terms <a href="{% url "books:book_search" %}">here</a></h2>
     <br>
-    <br>
-    <ul>
-    {% for book in books %}
-        <li>
-            <h2>
-            <a href="{{ book.get_absolute_url }}">
-                {{ book.isbn }} | {{ book.title }}
-            </a>
-        </h2>
-        <p>Written by {% for author in book.authors %}
-            <b>{{ author }}{% if not forloop.last %},{% endif %}</b>
-        {% endfor %}
-        </p>
-        </li>
-    {% endfor %}
-    </ul>
+    <div class="container">
+        <div class="row row-cols-2">
+            {% for book in books %}
+                <div class="col mt-3 w-50">
+                    <div class="card text-center">
+                        <h5 class="card-header">ISBN: {{ book.isbn }}</h5>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ book.title }}</h4>
+                            <p class="card-text">
+                                Written by {% for author in book.authors %}
+                                <b>{{ author }}{% if not forloop.last %},{% endif %}</b>
+                            {% endfor %}
+                            </p>
+                            <a href="{{ book.get_absolute_url }}" class="btn btn-primary">See more!</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
     {% include "pagination.html" with page=books %}
 {% endblock %}

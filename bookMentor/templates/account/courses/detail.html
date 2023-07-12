@@ -3,40 +3,52 @@
 {% block content %}
     <h2>{{ course.kurs }}</h2>
     <br>
-    <table style="border:1px solid black; width: 100%">
-        <tr>
-            <th>Obavezan/Izborni</th>
-            <th>Prva godina ER?</th>
-            <th>Dostupan najranije na SI</th>
-            <th>Dostupan najranije na IR</th>
-            <th>Dostupan najranije na OS</th>
-            <th>Dostupan najranije na OT</th>
-            <th>Dostupan najranije na OG</th>
-            <th>Dostupan najranije na OF</th>
-            <th>Dostupan najranije na OE</th>
-        </tr>
-        <tr>
-            <td>{{ course.o_i }}</td>
-            <td>{{ course.er }}</td>
-            <td>{{ course.simingod }}</td>
-            <td>{{ course.irmingod }}</td>
-            <td>{{ course.osmingod }}</td>
-            <td>{{ course.otmingod }}</td>
-            <td>{{ course.ogmingod }}</td>
-            <td>{{ course.ofmingod }}</td>
-            <td>{{ course.oemingod }}</td>
-        </tr>
-    </table>
+    <div class="container-fluid d-flex justify-content-center">
+        <table class="table table-light table-striped table-hover table-bordered border-secondary">
+            <tr>
+                <th>Obavezan/Izborni</th>
+                <th>Prva godina ER?</th>
+                <th>Dostupan najranije na SI</th>
+                <th>Dostupan najranije na IR</th>
+                <th>Dostupan najranije na OS</th>
+                <th>Dostupan najranije na OT</th>
+                <th>Dostupan najranije na OG</th>
+                <th>Dostupan najranije na OF</th>
+                <th>Dostupan najranije na OE</th>
+            </tr>
+            <tr>
+                <td>{% if course.o_i == 'o' %}Obavezan{% else %}Izborni{% endif %}</td>
+                <td>{{ course.er }}</td>
+                <td>{% if course.simingod is not None %}{{ course.simingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.irmingod is not None %}{{ course.irmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.osmingod is not None %}{{ course.osmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.otmingod is not None %}{{ course.otmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.ogmingod is not None %}{{ course.ogmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.ofmingod is not None %}{{ course.ofmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.oemingod is not None %}{{ course.oemingod }}{% else %}Nije dostupan{% endif %}</td>
+            </tr>
+        </table>
+    </div>
     <br>
-    <h3>Topics:</h3>
-    <ul>
-        {% for topic in course.topics %}
-            <li>{{ topic }}</li>
-        {% endfor %}
-    </ul>
+    <hr>
+    <hr>
     <br>
-    <form method="get">
-        {{ form.as_p }}
-        <input type="submit" value="Add course">
-    </form>
+    <div class="container-fluid">
+        <h3>Topics:</h3>
+        <ul class="list-group list-group-light w-25">
+            {% for topic in course.topics %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ topic }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <form method="get">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Add course">
+        </form>
+    </div>
 {% endblock %}

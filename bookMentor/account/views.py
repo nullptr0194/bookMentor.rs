@@ -54,7 +54,7 @@ def dashboard(request):
 @login_required
 def book_list(request):
     object_list = request.user.profile.books.all()
-    paginator = Paginator(object_list, 5)
+    paginator = Paginator(object_list, 6)
     page = request.GET.get('page')
     try:
         books = paginator.page(page)
@@ -139,4 +139,3 @@ def recommend(request):
     except EmptyPage:
         recommended_books = paginator.page(paginator.num_pages)
     return render(request, 'account/recommend/recommend.html', {'page': page, 'recommended_books': recommended_books})
-

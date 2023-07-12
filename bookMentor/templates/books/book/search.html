@@ -10,23 +10,26 @@
                 <a href="{% url "books:book_search" %}">Search again?</a>
             {% endwith %}
         </h3>
-        <ul>
-            {% for book in results %}
-                <li>
-                    <h2>
-                        <a href="{{ book.get_absolute_url }}">
-                            {{ book.isbn }} | {{ book.title }}
-                        </a>
-                    </h2>
-                    <p>Written by {% for author in book.authors %}
-                        <b>{{ author }}{% if not forloop.last %},{% endif %}</b>
-                    {% endfor %}
-                    </p>
-                </li>
-            {% empty %}
-                <h4 class="text-center">There's no match for the given query.</h4>
+        <div class="container">
+            <div class="row row-cols-2">
+                {% for book in results %}
+                <div class="col mt-3 w-50">
+                    <div class="card text-center">
+                        <h5 class="card-header">ISBN: {{ book.isbn }}</h5>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ book.title }}</h4>
+                            <p class="card-text">
+                                Written by {% for author in book.authors %}
+                                <b>{{ author }}{% if not forloop.last %},{% endif %}</b>
+                            {% endfor %}
+                            </p>
+                            <a href="{{ book.get_absolute_url }}" class="btn btn-primary">See more!</a>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
+            </div>
+        </div>
     {% else %}
         <h1 class="text-center">Search for Books</h1>
         <br>

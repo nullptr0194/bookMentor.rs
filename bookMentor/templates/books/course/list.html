@@ -3,18 +3,43 @@
 {% block content %}
     <h1 class="text-center">Courses</h1>
     <br>
-    <ul>
-        {% for course in courses %}
-            <li>
-                <h2>
-                    <a href="{{ course.get_absolute_url }}">
-                        {{ course.kurs }}
-                    </a>
-                </h2>
-                <p> Obavezan/Izborni: <b>{{ course.o_i }}</b>
-                </p>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <div class="row row-cols-2">
+            {% for course in courses %}
+                <div class="col mt-3 w-50">
+                    <div class="card text-center">
+                        <h5 class="card-header">{% if course.o_i == 'o' %}Obavezan predmet{% else %}Izborni
+                            predmet{% endif %}</h5>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ course.kurs }}</h4>
+                            <p class="card-text">
+                                Covered topics and coefficients: {% for topic in course.topics %}
+                                <b>{{ topic }}{% if not forloop.last %},{% endif %}</b>
+                            {% endfor %}
+                            </p>
+                            <a href="{{ course.get_absolute_url }}" class="btn btn-secondary">Learn more!</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
     {% include "pagination.html" with page=courses %}
 {% endblock %}
+
+
+
+
+{#<ul>#}
+{#        {% for course in courses %}#}
+{#            <li>#}
+{#                <h2>#}
+{#                    <a href="{{ course.get_absolute_url }}">#}
+{#                        {{ course.kurs }}#}
+{#                    </a>#}
+{#                </h2>#}
+{#                <p> Obavezan/Izborni: <b>{{ course.o_i }}</b>#}
+{#                </p>#}
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}

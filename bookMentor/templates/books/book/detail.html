@@ -2,35 +2,41 @@
 {% block title %}bookMentor.rs | {{ book.title }}{% endblock %}
 {% block content %}
     <h2 class="text-center">{{ book.title }}</h2>
-    <div class="container-fluid">
-        <div>
-            <img src="{{ book.cover_url }}" alt="Book Cover" width="300" height="400">
-        </div>
-        <br>
-        <div>
-            <p>Written by <b>{% for author in book.authors %}
-                {{ author }}{% if not forloop.last %},{% endif %}
-            {% endfor %}
-            </b></p>
-            <p>Published by <b>{% for publisher in book.publishers %}
-                {{ publisher }}{% if not forloop.last %},{% endif %}
-            {% endfor %}
-            </b></p>
-            <p>Topic: <b>{{ book.topic }}</b></p>
-            <p>Issued: <b>{{ book.issued }}</b></p>
-        </div>
-    </div>
-    <div class="container-fluid">
-        {% if request.user.is_authenticated %}
-            {% if book not in request.user.profile.books.all %}
-                <h4 class="text-center"><a href="{% url "books:book_added" book.isbn %}">Add book as read</a></h4>
-            {% else %}
-                <h4 class="text-center">You've already read this book!</h4>
-            {% endif %}
-        {% endif %}
-    </div>
-    <hr>
-    <h3 class="text-center">About:</h3>
     <br>
-    {{ book.description|safe }}
+    <br>
+    <div class="container-fluid">
+        <div class="row align-items-start">
+            <div class="col-4 text-center">
+                <img src="{{ book.cover_url }}" alt="Book Cover" width="300" height="400" class="rounded img-fluid">
+                <br>
+                {% if request.user.is_authenticated %}
+                    {% if book not in request.user.profile.books.all %}
+                        <br>
+                        <h4 class="text-center"><a href="{% url "books:book_added" book.isbn %}">Add book as read!</a>
+                        </h4>
+                    {% else %}
+                        <br>
+                        <h4 class="text-center">You've already read this book!</h4>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <br>
+            <div class="col-6">
+                <h4>Written by <b>{% for author in book.authors %}
+                    {{ author }}{% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </b></h4>
+                <h4>Published by <b>{% for publisher in book.publishers %}
+                    {{ publisher }}{% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </b></h4>
+                <h4>Topic: <b>{{ book.topic }}</b></h4>
+                <h4>Issued: <b>{{ book.issued }}</b></h4>
+                <br>
+                <h4>About:</h4>
+                <hr>
+                {{ book.description|safe }}
+            </div>
+        </div>
+    </div>
 {% endblock %}

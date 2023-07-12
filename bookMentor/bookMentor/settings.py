@@ -31,9 +31,15 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'books.apps.BooksConfig',
     'account.apps.AccountConfig',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

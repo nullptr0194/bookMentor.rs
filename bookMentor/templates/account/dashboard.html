@@ -5,11 +5,66 @@
     <br>
     <h2 class="text-center">Welcome to your dashboard, {{ request.user.first_name }}.</h2>
     <br>
-    <ul>
-        <li><h4>Edit your personal informations <a href="{% url "account:edit" %}">here</a>.</h4></li>
-        <li><h4>View your books <a href="{% url "account:book_list" %}">here</a>.</h4></li>
-        <li><h4>View available courses for assessment <a href="{% url "account:course_list" %}">here</a>.</h4></li>
-        <li><h4>View your graded courses <a href="{% url "account:course_mine" %}">here</a>.</h4></li>
-        <li><h4>Are you ready for <a href="{% url "account:recommend" %}">book recommendation</a>?</h4></li>
-    </ul>
+    <br>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-2">
+                <div class="card w-100 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Edit your profile!</h5>
+                        <hr>
+                        <p class="card-text">Edit your personal info in order to use service in a more quality way.</p>
+                        <br>
+                        <a href="{% url "account:edit" %}" class="btn btn-outline-primary">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card w-100 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Want to see your books?</h5>
+                        <hr>
+                        <p class="card-text">Now you can see your personal library one click away!</p>
+                        <br>
+                        <a href="{% url "account:book_list" %}" class="btn btn-outline-primary">See your books</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card w-100 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Courses waiting for your grades...</h5>
+                        <hr>
+                        <p class="card-text">View all available courses for grading. Choose those you found
+                            interesting.</p>
+                        <a href="{% url "account:course_list" %}" class="btn btn-outline-primary">View available
+                            courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card w-100 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Your graded courses in one place!</h5>
+                        <hr>
+                        <p class="card-text">See what you've graded so far :)</p>
+                        <br>
+                        <a href="{% url "account:course_mine" %}" class="btn btn-outline-primary">See graded courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card p-3 mt-5 w-50 text-center d-flex justify-content-center">
+                <h4>Ready for recommendation? <a href="{% url "account:recommend" %}">Let's go!</a></h4>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
+
+{#<ul>#}
+{#    <li><h4>Edit your personal informations <a href="{% url "account:edit" %}">here</a>.</h4></li>#}
+{#    <li><h4>View your books <a href="{% url "account:book_list" %}">here</a>.</h4></li>#}
+{#    <li><h4>View available courses for assessment <a href="{% url "account:course_list" %}">here</a>.</h4></li>#}
+{#    <li><h4>View your graded courses <a href="{% url "account:course_mine" %}">here</a>.</h4></li>#}
+{#    <li><h4>Are you ready for <a href="{% url "account:recommend" %}">book recommendation</a>?</h4></li>#}
+{#</ul>#}

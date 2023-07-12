@@ -3,17 +3,38 @@
 {% block content %}
     <h1>Your graded courses</h1>
     <br>
-    {% for graded_course in graded_courses %}
-        <h2>
-            <a href="{{ graded_course.course.get_absolute_url }}">
-                {{ graded_course.course.kurs }}
-            </a>
-        </h2>
-        <p> Ocena: {{ graded_course.grade }}
-        </p>
-        <hr>
-    {% empty %}
-        <h3>Start grading!</h3>
-    {% endfor %}
+    {#    {% for graded_course in graded_courses %}#}
+    {#        <h2>#}
+    {#            <a href="{{ graded_course.course.get_absolute_url }}">#}
+    {#                {{ graded_course.course.kurs }}#}
+    {#            </a>#}
+    {#        </h2>#}
+    {#        <p> Ocena: {{ graded_course.grade }}#}
+    {#        </p>#}
+    {#        <hr>#}
+    {#    {% empty %}#}
+    {#        <h3>Start grading!</h3>#}
+    {#    {% endfor %}#}
+    <div class="container">
+        <div class="row row-cols-2">
+            {% for graded_course in graded_courses %}
+                <div class="col mt-3 w-50">
+                    <div class="card text-center">
+                        <h5 class="card-header">{% if graded_course.course.o_i == 'o' %}Obavezan predmet{% else %}Izborni
+                            predmet{% endif %}</h5>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ graded_course.course.kurs }}</h4>
+                            <p class="card-text">
+                                Grade: {{ graded_course.grade }}
+                            </p>
+                            <a href="{{ graded_course.course.get_absolute_url }}" class="btn btn-secondary">Learn more!</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <h3>Start grading!</h3>
+            {% endfor %}
+        </div>
+    </div>
     {% include "pagination.html" with page=graded_courses %}
 {% endblock %}

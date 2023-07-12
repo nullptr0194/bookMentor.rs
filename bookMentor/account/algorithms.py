@@ -142,4 +142,3 @@ def description_rec(ratings, userID, candidate_books, save=True):
             candidate_books[book] += 1
         else:
             candidate_books[book] = 1
-

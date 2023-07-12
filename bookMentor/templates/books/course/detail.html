@@ -3,8 +3,8 @@
 {% block content %}
     <h2 class="text-center">{{ course.kurs }}</h2>
     <br>
-    <div class="container-fluid">
-        <table class="table table-light table-striped">
+    <div class="container-fluid d-flex justify-content-center">
+        <table class="table table-light table-striped table-hover table-bordered border-secondary">
             <tr>
                 <th>Obavezan/Izborni</th>
                 <th>Prva godina ER?</th>
@@ -17,26 +17,30 @@
                 <th>Dostupan najranije na OE</th>
             </tr>
             <tr>
-                <td>{{ course.o_i }}</td>
+                <td>{% if course.o_i == 'o' %}Obavezan{% else %}Izborni{% endif %}</td>
                 <td>{{ course.er }}</td>
-                <td>{{ course.simingod }}</td>
-                <td>{{ course.irmingod }}</td>
-                <td>{{ course.osmingod }}</td>
-                <td>{{ course.otmingod }}</td>
-                <td>{{ course.ogmingod }}</td>
-                <td>{{ course.ofmingod }}</td>
-                <td>{{ course.oemingod }}</td>
+                <td>{% if course.simingod is not None %}{{ course.simingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.irmingod is not None %}{{ course.irmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.osmingod is not None %}{{ course.osmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.otmingod is not None %}{{ course.otmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.ogmingod is not None %}{{ course.ogmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.ofmingod is not None %}{{ course.ofmingod }}{% else %}Nije dostupan{% endif %}</td>
+                <td>{% if course.oemingod is not None %}{{ course.oemingod }}{% else %}Nije dostupan{% endif %}</td>
             </tr>
         </table>
     </div>
     <br>
+    <hr>
+    <hr>
+    <br>
     <div class="container-fluid">
         <h3>Topics:</h3>
-        <ul>
+        <ul class="list-group list-group-light w-25">
             {% for topic in course.topics %}
-                <li>{{ topic }}</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ topic }}
+                </li>
             {% endfor %}
         </ul>
     </div>
-    <br>
 {% endblock %}
