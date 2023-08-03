@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}bookMentor.rs | {{ book.title }}{% endblock %}
+{% block title %}{{ book.title }}{% endblock %}
 {% block content %}
     <h2 class="text-center">{{ book.title }}</h2>
     <br>
@@ -12,11 +12,13 @@
                 {% if request.user.is_authenticated %}
                     {% if book not in request.user.profile.books.all %}
                         <br>
-                        <h4 class="text-center"><a href="{% url "books:book_added" book.isbn %}">Add book as read!</a>
+                        <h4 class="text-center"><a id="add" href="#" data-id="{{ book.isbn }}" class="add">Add book as
+                            read!</a>
+                            <h4 id="labelRead" class="text-center" hidden="true">You've already read this book!</h4>
                         </h4>
                     {% else %}
                         <br>
-                        <h4 class="text-center">You've already read this book!</h4>
+                        <h4 id="labelRead" class="text-center">You've already read this book!</h4>
                     {% endif %}
                 {% endif %}
             </div>
@@ -39,4 +41,22 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block domready %}
+    $('a#add').click(function(e){
+    e.preventDefault();
+    $.post('{% url "books:book_added" %}',
+    {
+    id: $(this).data('id'),
+    },
+    function(data){
+    if (data['status'] == 'ok')
+    {
+    $('a#add').hide();
+    $('h4#labelRead').removeAttr('hidden');
+    }
+    }
+    );
+    });
 {% endblock %}

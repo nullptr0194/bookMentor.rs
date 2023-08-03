@@ -9,52 +9,16 @@
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-<div>
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>
-                    {{ message|safe }}
-                    <a href="#">x</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-</div>
-{#<div class="header">#}
-{#    {% if request.user.is_authenticated %}#}
-{#        <h2>Good day <a href="{% url "account:dashboard" %}">{{ request.user.first_name }}</a>!</h2>#}
-{#        <p><a href="{% url "account:logout" %}">Logout</a></p>#}
-{#    {% else %}#}
-{#        <p><a href="{% url "account:login" %}">Login</a></p>#}
-{#    {% endif %}#}
-{#</div>#}
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-light">
         <div class="container-fluid">
-            <!-- Toggle button -->
-            <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarCenteredExample"
-                    aria-controls="navbarCenteredExample"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-            >
-                <i class="fas fa-bars"></i>
+            <a class="navbar-brand" href="{% url "home:home_view" %}">bookMentor.rs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Collapsible wrapper -->
-            <div
-                    class="collapse navbar-collapse justify-content-center"
-                    id="navbarCenteredExample"
-            >
-                <!-- Left links -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#"><b>bookMentor.rs</b></a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url "books:book_list" %}">All Books</a>
                     </li>
@@ -75,12 +39,36 @@
                         </li>
                     {% endif %}
                 </ul>
+                </li>
+                </ul>
             </div>
         </div>
     </nav>
 </header>
 <br>
 <br>
+{#<div class="container-fluid">#}
+{#    {% if messages %}#}
+{#        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">#}
+{#            <div class="modal-dialog">#}
+{#                <div class="modal-content">#}
+{#                    <div class="modal-header">#}
+{#                        <h1 class="modal-title fs-5" id="exampleModalLabel">Message</h1>#}
+{#                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>#}
+{#                    </div>#}
+{#                    <div class="modal-body">#}
+{#                        {% for message in messages %}#}
+{#                            {{ message }}#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                    <div class="modal-footer">#}
+{#                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endif %}#}
+{#</div>#}
 <br>
 {% block content %}{% endblock %}
 <br>
@@ -90,12 +78,45 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2023 Copyright:
-        <a class="text-dark" href="{% url "books:book_list" %}">bookMentor.rs</a>
+        <a class="text-dark" href="{% url "home:home_view" %}">bookMentor.rs</a> | <a class="text-dark"
+                                                                                      href="{% url "home:about_view" %}">About</a>
     </div>
     <!-- Copyright -->
 </footer>
+
+<!-- Import Bootstrap5 via cdn -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+<!-- Import jQuery for AJAX via cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<!-- Import JSCookie (for cookie management) via cdn -->
+<script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+"></script>
+
+<script>
+    var csrftoken = Cookies.get('csrftoken');
+
+    function csrfSafeMethod(method) {  //check whether the method is safe
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    //the following code adds CSRF token if the request is not safe (methods such as POST and PUT)
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    //the following code block is for adding additional js code
+    $(document).ready(function () {
+        {% block domready %}
+        {% endblock %}
+    })
+</script>
+
 </body>
 </html>

@@ -3,6 +3,8 @@ from .models import Book, Course
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from .forms import BookSearchForm
+from django.views.decorators.http import require_POST
+from django.http import JsonResponse
 
 
 def book_list(request):
@@ -23,11 +25,22 @@ def book_detail(request, isbn):
     return render(request, 'books/book/detail.html', {'book': book})
 
 
-def book_added(request, isbn):
-    book = get_object_or_404(Book, isbn=isbn)
-    request.user.profile.books.add(book)
-    request.user.profile.save()
-    return render(request, 'books/book/detail.html', {'book': book})
+@require_POST
+def book_added(request):
+    # book = get_object_or_404(Book, isbn=isbn)
+    # request.user.profile.books.add(book)
+    # request.user.profile.save()
+    # return render(request, 'books/book/detail.html', {'book': book})
+    book_id = request.POST.get('id')
+    if book_id:
+        try:
+            book = Book.objects.get(isbn=book_id)
+            request.user.profile.books.add(book)
+            request.user.profile.save()
+            return JsonResponse({'status': 'ok'})
+        except:
+            pass
+    return JsonResponse({'status': 'error'})
 
 
 def course_list(request):

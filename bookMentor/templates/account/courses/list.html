@@ -1,18 +1,8 @@
 {% extends "base.html" %}
-{% block title %}bookMentor.rs | Module Courses{% endblock %}
+{% block title %}Module Courses{% endblock %}
 {% block content %}
-    <h1>Module Courses</h1>
+    <h1 class="text-center">Module Courses</h1>
     <br>
-    {#    {% for course in courses %}#}
-    {#        <h2>#}
-    {#            <a href="{% url "account:course_detail" course.kurs %}">#}
-    {#                {{ course.kurs }}#}
-    {#            </a>#}
-    {#        </h2>#}
-    {#        <p> Obavezan/Izborni: {{ course.o_i }}#}
-    {#        </p>#}
-    {#        <hr>#}
-    {#    {% endfor %}#}
     <div class="container">
         <div class="row row-cols-2">
             {% for course in courses %}

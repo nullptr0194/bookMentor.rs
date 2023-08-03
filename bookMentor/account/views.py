@@ -20,7 +20,12 @@ def register(request):
             prof = Profile.objects.create(user=new_user)
             prof.books.clear()
             prof.save()
+
+            # FORSIRATI KORISNIKA DA SE NAKON REGISTRACIJE PREBACI NA EDITOVANJE PROFILA
+
             return render(request, 'account/register_done.html', {'new_user': new_user})
+            # request.user = new_user
+            # return edit(request)
         else:
             user_form = UserRegistrationForm()
             return render(request, 'account/register.html', {'user_form': user_form})
@@ -96,8 +101,10 @@ def course_detail(request, kurs):
             update_csv(path, request.user.profile.pk,
                        graded_course.course.get_topics_dict(), grade)
             messages.success(request, 'Added successfully!')
+            return render(request, 'account/dashboard.html')
         else:
             messages.error(request, 'Error while updating.')
+            return render(request, 'account/courses/detail.html', {'form': course_form, 'course': course})
 
     else:
         course_form = AddCourseForm()
