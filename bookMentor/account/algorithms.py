@@ -86,6 +86,8 @@ def build(ratings, userID, save=True):
 
     candidate_books = {}
 
+    sim_weight = 1.2
+
     profiles = Profile.objects.all()
     for i in range(1, len(top_similar_users_id)):
         for profile in profiles.all():
@@ -93,9 +95,9 @@ def build(ratings, userID, save=True):
             if profile.pk == id_slicnog:
                 for book in profile.books.all():
                     if book in candidate_books:
-                        candidate_books[book] += 1.2
+                        candidate_books[book] += sim_weight
                     else:
-                        candidate_books[book] = 1.2
+                        candidate_books[book] = sim_weight
 
     return candidate_books
 
@@ -136,9 +138,11 @@ def description_rec(ratings, userID, candidate_books, save=True):
 
     top_features = list(ratings.columns[top_indices])
 
+    desc_weight = 1
+
     books = get_most_popular_books_by_topics(top_features)
     for book in books:
         if book in candidate_books:
-            candidate_books[book] += 1
+            candidate_books[book] += desc_weight
         else:
-            candidate_books[book] = 1
+            candidate_books[book] = desc_weight
